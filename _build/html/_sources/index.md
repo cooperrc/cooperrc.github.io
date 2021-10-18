@@ -56,25 +56,4 @@ and thermal sciences, as well as statistical methods to analyze the
 experimental data.
 
 
-### [ME5180 - Advanced Dynamics](https://cooperrc.github.io/advanced-dynamics)
-
-Dynamics is the study of how things move and interact. It sets the
-foundation for almost every Mechanical engineering discipline: solid
-mechanics, fluid mechanics, controls, vibrations, etc. We are limiting
-our study to classical mechanics.
-
-We have four conditions for classical mechanics:
-
-1. mass of objects is constant
-2. mass of objects >> mass of atomic particles
-3. velocity << speed of light
-4. time is short (less than millenia) and mass is small (less than the sun
-or black holes)
-
-This course derives equations of motion for multibody systems using
-kinematics and kinetics. Kinematics is the study of the geometry of
-motion. Kinetics is the study of forces, impacts, and energy on objects.
-Your goal is to build general equations of motion using Lagrange
-equations. We will build the foundation for more advanced rigid body
-dynamic software in Python.
 
