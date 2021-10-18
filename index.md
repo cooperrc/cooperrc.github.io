@@ -19,7 +19,7 @@ Storrs, CT 06269
 
 - direct message on [gitter.im/cooperrc](https://gitter.im/cooperrc)
 - direct message on [Campuswire](https://campuswire.com/)
-__email:__ ryan_dot_c_dot_cooper_at_uconn.edu
+- __email:__ ryan_dot_c_dot_cooper_at_uconn.edu
 
 
 ## Open educational resources:
