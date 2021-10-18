@@ -15,6 +15,10 @@ University of Connecticut\
 Engineering Building II room 315\
 Storrs, CT 06269
 
+### Contact Prof. Cooper
+
+- direct message on [gitter.im/cooperrc](https://gitter.im/cooperrc)
+- direct message on [Campuswire](https://campuswire.com/)
 __email:__ ryan_dot_c_dot_cooper_at_uconn.edu
 
 
