@@ -17,6 +17,7 @@ Storrs, CT 06269
 
 ### Contact Prof. Cooper
 
+- __Office hours__ by appointment: [Calendly](https://calendly.com/ryan-c-cooper/30min)
 - direct message on [gitter.im/cooperrc](https://gitter.im/cooperrc)
 - direct message on [Campuswire](https://campuswire.com/)
 - __email:__ ryan_dot_c_dot_cooper_at_uconn.edu
