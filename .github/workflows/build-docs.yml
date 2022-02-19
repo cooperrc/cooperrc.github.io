@@ -39,6 +39,7 @@ jobs:
       shell: bash
       run: |
         julia -e 'using Pkg; Pkg.add("IJulia");'
+        julia -e 'using Pkg; Pkg.add("Plots");'
         julia --project=Julia-learning --threads auto -e 'using Pkg; Pkg.instantiate();'
     # Build the book
     - name: Build the book
