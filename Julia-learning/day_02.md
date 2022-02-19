@@ -100,3 +100,25 @@ Stacktrace:
    @ Base ./loading.jl:1196
 ```
 
+So, I updated the Julia build with `Plots`:
+
+```yaml
+    - name: Install IJulia and setup project
+      shell: bash
+      run: |
+        julia -e 'using Pkg; Pkg.add("IJulia");'
+        julia -e 'using Pkg; Pkg.add("Plots");' # <---------  the magic word!
+        julia --project=Julia-learning --threads auto -e 'using Pkg; Pkg.instantiate();'
+```
+
+Once I had `Plots` added, the figures and _even_ animations showed up
+without widgets or any other magic! _Mostly because the animations are
+cleverly built as gifs_. 
+
+## Wrapping up
+
+Today I didn't get any real Julia development work, but I was able to
+build scripts to
+- install Julia packages via `julia -e 'using Pkg; ...'`
+- build Jupyter Books using the Julia kernel
+- display Julia figures and animations on my website
