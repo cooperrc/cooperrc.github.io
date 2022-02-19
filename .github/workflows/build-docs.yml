@@ -34,8 +34,8 @@ jobs:
     - name: Set up Julia
       uses: julia-actions/setup-julia@v1
       with: 
-      version: 1.7.2
-      - name: Install IJulia and setup project
+        version: 1.7.2
+    - name: Install IJulia and setup project
       shell: bash
       run: |
         julia -e 'using Pkg; Pkg.add("IJulia");'
