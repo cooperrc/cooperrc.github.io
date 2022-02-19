@@ -22,7 +22,6 @@ jobs:
     - name: Install dependencies
       run: |
         pip install -r requirements.txt
-
 	- name: Install latex dependencies
 	  run: |
 		sudo apt-get -qq update
