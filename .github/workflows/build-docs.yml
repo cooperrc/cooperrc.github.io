@@ -22,7 +22,25 @@ jobs:
     - name: Install dependencies
       run: |
         pip install -r requirements.txt
-
+	- name: Install LaTeX dependencies
+	  run: |
+		sudo apt-get -qq update
+		sudo apt-get install -y \
+			texlive-latex-recommended \
+			texlive-latex-extra \
+			texlive-fonts-recommended \
+			texlive-fonts-extra \
+			dvipng \
+			cm-super
+	- name: Set up Julia
+	  uses: julia-actions/setup-julia@v1
+	  with: 
+	  version: 1.7.2
+	- name: Install IJulia and setup project
+	  shell: bash
+	  run: |
+		julia -e 'using Pkg; Pkg.add("IJulia");'
+		julia --project=Julia-learning --threads auto -e 'using Pkg; Pkg.instantiate();'
     # Build the book
     - name: Build the book
       run: |
