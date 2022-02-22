@@ -57,10 +57,10 @@ content.
 
 ## Adding Julia + IJulia to the workflow
 
-Yaml files can be finicky, so when I copy-pasted some another github
+Yaml files can be finicky, so when I copy-pasted another github
 action from the excellent [QuantEcon with
 Julia](https://julia.quantecon.org/intro.html) I had some
-troubleshooting to deal with for whitespaces vs tabs. The main lines I
+troubleshooting in whitespaces vs tabs. The main lines I
 needed were:
 
 ```yaml
@@ -83,7 +83,7 @@ the sections in the Learning Julia table of contents.
 
 ## Including plots
 
-The page existed, but yesterday I was workin  on plotting with the
+The page existed, but yesterday I was working on plotting with the
 `Plots` package. I received this error in the notebook:
 
 ```julia

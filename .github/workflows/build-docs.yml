@@ -40,6 +40,7 @@ jobs:
       run: |
         julia -e 'using Pkg; Pkg.add("IJulia");'
         julia -e 'using Pkg; Pkg.add("Plots");'
+		julia -e 'using Pkg; Pkg.add("https://github.com/cooperrc/PlotThemes.jl");'
         julia --project=Julia-learning --threads auto -e 'using Pkg; Pkg.instantiate();'
     # Build the book
     - name: Build the book
