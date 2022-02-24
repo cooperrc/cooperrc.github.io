@@ -36,7 +36,7 @@ using Dates
 Now, I can `CSV.read` the NYSE data as a `DataFrame` as follows,
 
 ```{code-cell}
-nyse_df = CSV.read("./nyse-data.csv", DataFrame)
+nyse_df = CSV.read("./nyse-data.csv", DataFrame);
 ```
 
 Here, I focus on just the Google stock price (`GOOGL`). I use a couple of calls to the `nyse_df` dataframe:
@@ -47,7 +47,7 @@ Here, I focus on just the Google stock price (`GOOGL`). I use a couple of calls 
 In one line, these calls to `nyse_df` create `google_df` that only contains the Google open, close, low, high, and volume values from 2010 - 2016. 
 
 ```{code-cell}
-google_df = nyse_df[nyse_df[!, "symbol"] .== "GOOGL", :]
+google_df = nyse_df[nyse_df[!, "symbol"] .== "GOOGL", :];
 ```
 
 ## Dates in Julia
