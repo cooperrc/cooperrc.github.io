@@ -39,6 +39,7 @@ jobs:
       shell: bash
       run: |
         julia -e 'using Pkg; Pkg.add("IJulia");'
+        julia -e 'using Pkg; Pkg.gc();'
         julia -e 'using Pkg; Pkg.add("Plots");'
         julia -e 'using Pkg; Pkg.add("CSV");'
         julia -e 'using Pkg; Pkg.add("Dates");'
