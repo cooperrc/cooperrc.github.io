@@ -27,7 +27,6 @@ I built up the solution in 3 steps:
 
 ```{code-cell}
 using Plots, DifferentialEquations, LaTeXStrings
-using Statistics
 ```
 
 ## Build the double pendulum differential equations
@@ -93,7 +92,6 @@ du = M\rhs
 ```
 
 ```{code-cell}
-
 function doublependulum(u, params, t)
     g = 9.81
     du = zeros(length(u))
@@ -124,6 +122,7 @@ I chose `ODEProblem` parameters as such
 - initial condition: release from rest at $\theta_1 = 114.59^o~and~\theta_2 = 114.59^o~and~114.65^o$, `[2, 2, 0, 0]` and `[2, 2.001, 0, 0]` _a difference of $\approx 3~min~or~\frac{3}{60}~degrees$
 
 ```{code-cell}
+Plots.theme(:cooper)
 tspan = (0, 20);
 p = [1, 1, 0.1, 0.1];
 prob1 = ODEProblem(doublependulum, [2, 2, 0, 0], tspan, p)
@@ -164,7 +163,7 @@ I looked at the [Three Body Work-Precision](https://benchmarks.sciml.ai/html/Non
 
 > __Note__: for more integration options and explanations, check the [DifferentialEquations ODE Solvers](https://diffeq.sciml.ai/stable/solvers/ode_solve/) page.
 
-I set up the `ODEProblem` as the `doublependulum` with $\theta_1 = \theta_2 = 2~rad$ starting from rest i.e. `[2, 2, 0, 0]`. The pendulum lengths and masses are $L_1 = L_2 = 1~m$ and $m_1 = m_2 = 0.1~kg$. 
+I set up the `ODEProblem` as the `doublependulum` with $\theta_1 = \theta_2 = 2~rad$ starting from rest i.e. `[2, 2, 0, 0]`. The pendulum lengths and masses are $L_1 = L_2 = 1~m$ and $m_1 = m_2 = 0.1~kg$.
 
 ```{code-cell}
 tspan = (0, 20);
@@ -226,7 +225,7 @@ boxplot([[stats[i][j].time for j in range(1, Nruns)] for i in range(1, length(me
 plot!(xticks = (range(1, 6), [split(string(m), "(")[1] for m in methods]))
 ```
 
-![image.png](attachment:a548c41d-3519-44e1-92fb-9022933858bd.png)
+![image.png](./timed-methods-auto.png)
 
 The outliers swamp the average and standard deviations of these runs, so here I set the `ylim` to 5 ms. 
 
@@ -236,13 +235,11 @@ boxplot([[stats[i][j].time for j in range(1, Nruns)] for i in range(1, length(me
 plot!(xticks = (range(1, 6), [split(string(m), "(")[1] for m in methods]))
 ```
 
-![image.png](attachment:9e18cbca-839d-4e2e-b482-730c17ff5b6b.png)
+![image.png](timed-methods-close.png)
 
-Now, I can see that the two fastest methods are `Tsit5()` and `DP5()`. There was no significant difference between these two methods. I'm sure there are methods to get even better results, but the methods blazingly fast and efficient for this little 2DOF nonlinear problem. 
+Now, I can see that the two fastest methods are `Tsit5()` and `DP5()`. There was no significant difference between these two methods. I'm sure there are methods to get even better results, but the methods blazingly fast and efficient for this little 2DOF nonlinear problem.
 
-```{code-cell}
-Plots.theme(:cooper)
-```
++++
 
 ## Compile lots of solutions into one gif
 
@@ -269,7 +266,7 @@ or I could plot the path taken by the second hinge, which should be a semicircle
 
 `plot(X[2, :, 10], Y[2, :, 10])`
 
-Each of the dimensions for `X` and `Y` are `<hinge #>, <timestep>, <pendulum #>`. 
+Each of the dimensions for `X` and `Y` are `<hinge #>, <timestep>, <pendulum #>`.
 
 ```{code-cell}
 tspan = (0, 20);
@@ -307,7 +304,7 @@ for pend_i in range(1, Npendulums)
 end
 ```
 
-I want to color code each pendulum and path. Here, I use the `ColorSchemes` to set the colors for the pendulums. Using 10 pendulums, I would have these 10 colors from the `rainbow` scheme. 
+I want to color code each pendulum and path. Here, I use the `ColorSchemes` to set the colors for the pendulums. Using 10 pendulums, I would have these 10 colors from the `rainbow` scheme.
 
 ```{code-cell}
 import ColorSchemes.rainbow
