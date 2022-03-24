@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+     width="180mm" height="25mm"
+     viewBox="0 0 10 1" preserveAspectRatio="none"
+     shape-rendering="crispEdges" stroke="none">
+<rect width=".94" height=".96" x="0" y="0" fill="#781C86" />
+<rect width=".94" height=".96" x="1" y="0" fill="#4333BE" />
+<rect width=".94" height=".96" x="2" y="0" fill="#416ECE" />
+<rect width=".94" height=".96" x="3" y="0" fill="#539BB5" />
+<rect width=".94" height=".96" x="4" y="0" fill="#70B487" />
+<rect width=".94" height=".96" x="5" y="0" fill="#98BD5E" />
+<rect width=".94" height=".96" x="6" y="0" fill="#C3BA46" />
+<rect width=".94" height=".96" x="7" y="0" fill="#E0A13A" />
+<rect width=".94" height=".96" x="8" y="0" fill="#E56B2F" />
+<rect width=".94" height=".96" x="9" y="0" fill="#DB2122" />
+</svg>
