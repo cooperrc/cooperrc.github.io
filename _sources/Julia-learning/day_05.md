@@ -36,7 +36,7 @@ $\theta(t) = A\cos\omega t + B\sin\omega t$
 
 where $A$ and $B$ are integration constants solved with the initial angle and angular velocity and $\omega = \sqrt{\frac{g}{r}}$ is the natural frequency of the pendulum.  
 
-I have a linear second order differential equation with an exact solution and a nonlinear second order differential equation with no exact solution. Now, I'm ready to integrate these differential equations. 
+I have a linear second order differential equation with an exact solution and a nonlinear second order differential equation with no exact solution. Now, I'm ready to integrate these differential equations.
 
 ```{code-cell}
 using DifferentialEquations, Plots, LaTeXStrings
@@ -98,7 +98,7 @@ function pendulum(u, params, t)
 end
 ```
 
-Checking the `pendulum` function, if $\theta = 90^o=\frac{\pi}{2}$, then the acceleration should be $-g/r = -39~rad/s/s$. 
+Checking the `pendulum` function, if $\theta = 90^o=\frac{\pi}{2}$, then the acceleration should be $-g/r = -39~rad/s/s$.
 
 ```{code-cell}
 pendulum([pi/2, 0], [0.25], 0)
@@ -131,7 +131,7 @@ Now, I have the _linear_  $\theta(t)$ solution, `a_lin` and the _nonlinear solut
 > ```
 > Its Julia, so I _shouldn't_ have to vectorize my work, but I just can't help it. 
 
-First step, is to just compare angle, $\theta$ vs time. 
+First step, is to just compare angle, $\theta$ vs time.
 
 ```{code-cell}
 a_nlin = [sol(ti)[1] for ti = t]
@@ -168,7 +168,7 @@ The `@gif` is built by looping through plot commands. I would _love_ to see some
 4. plot the current position of the pendulum in the second layout position, `b` or `p[2]`
 5. label the pendulums in the second layout position so the legend is on the bottom
 
-The result is that you cannot tell the difference between a linear and nonlinear solution for these small angles. 
+The result is that you cannot tell the difference between a linear and nonlinear solution for these small angles.
 
 ```{code-cell}
 l = @layout [a; b]
@@ -201,7 +201,7 @@ When I first defined the _linear_ and _nonlinear_ differential equations, I made
 - the linear function $\theta$
 - the third-order function $\theta - \frac{\theta^3}{3!}$
 
-The plot that I create below for $\theta = 0-90^o$ looks like the exact, linear, and third order functions line up until $\theta \approx 20^o$. My rule of thumb is $30^o$ is _"small enough"_. If the values of $\theta > 30^o$, you should start to visually see differences between the nonlinear and linear solutions. 
+The plot that I create below for $\theta = 0-90^o$ looks like the exact, linear, and third order functions line up until $\theta \approx 20^o$. My rule of thumb is $30^o$ is _"small enough"_. If the values of $\theta > 30^o$, you should start to visually see differences between the nonlinear and linear solutions.
 
 ```{code-cell}
 theta = range(0, pi/2, 50)
@@ -212,7 +212,7 @@ plot!(theta*180/pi, theta - theta.^3/6, label = L"$\theta-\frac{\theta^3}{3!}$")
 
 ## What happens when angles are "large"
 
-Here, I consider a "large" rotation where the initial angle, $\theta(0) = 160^o$. I am reusing the same solutions from above, but the only change is that `a0 = 16/18pi`. There is a very obvious difference in the first plot for $\theta$ vs time. The time period doubles for the nonlinear solution. The linear solution completes two full swings before the nonlinear solution completes one swing. 
+Here, I consider a "large" rotation where the initial angle, $\theta(0) = 160^o$. I am reusing the same solutions from above, but the only change is that `a0 = 16/18pi`. There is a very obvious difference in the first plot for $\theta$ vs time. The time period doubles for the nonlinear solution. The linear solution completes two full swings before the nonlinear solution completes one swing.
 
 ```{code-cell}
 g = 9.81
@@ -239,7 +239,7 @@ xlabel = "time (s)",
 ylabel = L"$\theta$ (dbeg)")
 ```
 
-Animating this result, I use the `@gif` setup from above, but now the `a_nlin` and `a_lin` are oscillating from $\theta = -160^o - 160^o$. 
+Animating this result, I use the `@gif` setup from above, but now the `a_nlin` and `a_lin` are oscillating from $\theta = -160^o - 160^o$.
 
 ```{code-cell}
 l = @layout [a; b]
@@ -255,11 +255,11 @@ l = @layout [a; b]
     x_lin = [0, r*sin(a_lin[i])]
     y_nlin = [0, -r*cos(a_nlin[i])]
     y_lin = [0, -r*cos(a_lin[i])]
-    plot!(p[2], x_lin, y_lin, 
+    plot!(p[2], x_nlin, y_nlin, 
         label = "nonlinear",
         xlims = (-0.3,0.3), ylims = (-0.3, 0.3),
     aspect_ratio= :equal)
-    plot!(p[2], x_nlin, y_nlin, 
+    plot!(p[2], x_lin, y_lin, 
     label = "linear", 
     axis = nothing)
 end
