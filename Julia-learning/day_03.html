@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -33,17 +33,17 @@
     
   <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
+    <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
@@ -156,6 +156,11 @@
       </span>
      </code>
      : Computer Algebra System
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="day_08-issues.html">
+     Day_08: Filing and tracking issues in GitHub
     </a>
    </li>
   </ul>
@@ -346,7 +351,7 @@
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="day-03-dataframes-and-plot-themes">
+  <div class="section" id="day-03-dataframes-and-plot-themes">
 <h1>Day_03: Dataframes and Plot Themes<a class="headerlink" href="#day-03-dataframes-and-plot-themes" title="Permalink to this headline">¶</a></h1>
 <p>Today I wanted to visualize some data that I use for my <a class="reference external" href="https://cooperrc.github.io/computational-mechanics/module_02/README.html">computational mechanics</a> course, the New York Stock Exchange data from 2010 to 2016. Its a nice set of data to load in a lot of values, parse it down based upon the <a class="reference external" href="https://www.nyse.com/listings_directory/stock">NYSE symbol</a> and view the rise and fall of stock prices.</p>
 <p>I usually use <a class="reference external" href="https://pandas.pydata.org/">Pandas</a> as my data processing/storage tool, so I stumbled upon the <code class="docutils literal notranslate"><span class="pre">CSV</span></code> and <code class="docutils literal notranslate"><span class="pre">DataFrames</span></code> packages in the Julia ecosystem. I installed via</p>
