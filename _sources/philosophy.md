@@ -1,5 +1,7 @@
 # Teaching Philosophy
 
+## Introduction
+
 I frame learning as a journey with the student as the central figure.
 The student's journey includes recognizing their own strengths and
 appreciating the background and experiences that they bring to the
@@ -56,7 +58,7 @@ My courses have varying levels of open-ended project examples, the least
 open-ended would include a very specific goal, e.g. [make a model of
 firework](https://cooperrc.github.io/computational-mechanics/projects/03_IVP-project.html),
 but its up to the individual to choose _how_ and _what_ to report. The
-most open-ended projects as students to [apply Newton's laws to your
+most open-ended projects ask students to [apply Newton's laws to your
 career](https://cooperrc.github.io/engineering-dynamics/module_05/overview.html)
 where the goal is to let students build an application that is
 important to _them_. 
