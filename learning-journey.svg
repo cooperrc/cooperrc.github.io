@@ -5,7 +5,7 @@
    viewBox="0 0 279.40001 215.90001"
    version="1.1"
    id="svg8"
-   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
    sodipodi:docname="learning-journey.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -162,8 +162,8 @@
     <rect
        x="12.482092"
        y="213.01215"
-       width="93.843613"
-       height="60.02187"
+       width="112.81367"
+       height="82.737005"
        id="rect2454-6" />
     <rect
        x="12.482092"
@@ -501,7 +501,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.69410849"
-     inkscape:cx="202.41792"
+     inkscape:cx="203.13827"
      inkscape:cy="408.43759"
      inkscape:document-units="mm"
      inkscape:current-layer="layer2"
@@ -1327,7 +1327,7 @@
        id="a42591"
        xlink:href="https://www.gutenberg.org/files/852/852-h/852-h.htm"
        xlink:title="John Dewey &quot;Democracy and Education&quot;"
-       transform="matrix(0.59260633,0,0,0.59260633,78.492139,84.169551)">
+       transform="matrix(0.71459941,0,0,0.71459941,61.662257,85.009526)">
       <image
          width="30.821033"
          height="42.155933"
@@ -1342,56 +1342,68 @@
        xml:space="preserve"
        id="text2452-4"
        style="font-style:normal;font-weight:normal;font-size:8.81944px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect2454-6);display:inline;opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-linecap:butt;stroke-linejoin:round"
-       transform="matrix(0.59260633,0,0,0.59260633,108.4217,-20.511569)"
+       transform="matrix(0.59260633,0,0,0.59260633,101.36453,-19.386)"
        x="0"
        y="0"><tspan
          x="12.482422"
          y="221.03631"
-         id="tspan3004"><tspan
-           dx="0 0 0 0 0 0 0 0 0 0 0 2.4740219 0 0 2.4740219 0 2.4740181"
+         id="tspan1017"><tspan
+           dx="0 0 0 0 0 0 0 0 0 0 0 8.796936 0 0 8.7969398 0 8.7969398"
            style="font-stretch:condensed;font-family:Coolvetica;-inkscape-font-specification:'Coolvetica Condensed';text-align:justify"
-           id="tspan3002">&quot;Education is a social </tspan></tspan><tspan
+           id="tspan1015">&quot;Education is a social </tspan></tspan><tspan
          x="12.482422"
          y="232.0606"
-         id="tspan3010"><tspan
+         id="tspan1023"><tspan
            style="font-stretch:condensed;font-family:Coolvetica;-inkscape-font-specification:'Coolvetica Condensed';text-align:justify"
-           id="tspan3006">process. </tspan><tspan
-           dx="3.653717 0 0 0 0 0 0 0 0 0 3.653717"
+           id="tspan1019">process. </tspan><tspan
+           dx="13.138092 0 0 0 0 0 0 0 0 0 13.138092"
            style="font-stretch:condensed;font-family:Coolvetica;-inkscape-font-specification:'Coolvetica Condensed';text-align:justify"
-           id="tspan3008">Education is </tspan></tspan><tspan
+           id="tspan1021">Education is </tspan></tspan><tspan
          x="12.482422"
          y="243.08489"
-         id="tspan3014"><tspan
-           dx="0 0 0 0 0 0 0 0 3.6052132 0 0 0 0 0 0 0 0 0 3.6052132"
+         id="tspan1029"><tspan
+           dx="0 0 0 0 0 0 0 0 0.6688385 0 0 0 0 0 0 0 0 0 0.66884232"
            style="font-stretch:condensed;font-family:Coolvetica;-inkscape-font-specification:'Coolvetica Condensed';text-align:justify"
-           id="tspan3012">growth. Education is, </tspan></tspan><tspan
+           id="tspan1025">growth. Education is, </tspan><tspan
+           dx="0.66884232 0 0 0 0.66883469"
+           style="font-stretch:condensed;font-family:Coolvetica;-inkscape-font-specification:'Coolvetica Condensed';text-align:justify"
+           id="tspan1027">not a </tspan></tspan><tspan
          x="12.482422"
          y="254.10918"
-         id="tspan3018"><tspan
-           dx="0 0 0 0 2.3799477 0 2.3799477 0 0 0 0 0 0 0 0 0 0 0 2.3799477"
+         id="tspan1035"><tspan
+           dx="0 0 0 0 0 0 0 0 0 0 0 0 16.198441"
            style="font-stretch:condensed;font-family:Coolvetica;-inkscape-font-specification:'Coolvetica Condensed';text-align:justify"
-           id="tspan3016">not a preparation for </tspan></tspan><tspan
+           id="tspan1031">preparation for </tspan><tspan
+           dx="16.198437"
+           style="font-stretch:condensed;font-family:Coolvetica;-inkscape-font-specification:'Coolvetica Condensed';text-align:justify"
+           id="tspan1033">life; </tspan></tspan><tspan
          x="12.482422"
          y="265.13348"
-         id="tspan3024"><tspan
-           dx="0 0 0 0 0 0 3.9027863"
+         id="tspan1043"><tspan
            style="font-stretch:condensed;font-family:Coolvetica;-inkscape-font-specification:'Coolvetica Condensed';text-align:justify"
-           id="tspan3020">life; education </tspan><tspan
-           dx="3.9027863 0 0 3.9027824"
+           id="tspan1037">education </tspan><tspan
            style="font-stretch:condensed;font-family:Coolvetica;-inkscape-font-specification:'Coolvetica Condensed';text-align:justify"
-           id="tspan3022">is life </tspan></tspan><tspan
-         x="12.482422"
-         y="281.05779"
-         id="tspan3028"><tspan
-           dx="0 2.2754104 3.1838181 4.2245131 4.9741564 2.2754097 2.8574944 2.3636055 3.598341 2.2930565 2.8398647 2.2930565 2.407711 5.3357582 5.4504166 5.4504128 2.2930565 6.4381866 4.7977676 6.9320679 4.7977676 4.4979172"
+           id="tspan1039">is life </tspan><tspan
            style="font-stretch:condensed;font-family:Coolvetica;-inkscape-font-specification:'Coolvetica Condensed';text-align:justify"
-           id="tspan3026">itself.&quot; - John Dewey
+           id="tspan1041">itself.&quot; 
 </tspan></tspan><tspan
          x="12.482422"
-         y="292.08209"
-         id="tspan3032"><tspan
+         y="276.15777"
+         id="tspan1047"><tspan
            style="font-stretch:condensed;font-family:Coolvetica;-inkscape-font-specification:'Coolvetica Condensed';text-align:justify"
-           id="tspan3030">
+           id="tspan1045">
+</tspan></tspan><tspan
+         x="12.482422"
+         y="287.18206"
+         id="tspan1051"><tspan
+           style="font-stretch:condensed;font-family:Coolvetica;-inkscape-font-specification:'Coolvetica Condensed';text-align:justify"
+           id="tspan1049">- John Dewey
+</tspan></tspan><tspan
+         x="12.482422"
+         y="298.20635"
+         id="tspan1055"><tspan
+           style="font-stretch:condensed;font-family:Coolvetica;-inkscape-font-specification:'Coolvetica Condensed';text-align:justify"
+           id="tspan1053">
 </tspan></tspan></text>
     <a
        id="a43202"
