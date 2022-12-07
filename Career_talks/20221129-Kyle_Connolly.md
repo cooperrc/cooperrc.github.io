@@ -1,20 +1,6 @@
 ## Moving and Stopping elevators with Dynamics
 ### Kyle Connolly - Structures and Design Group
 
- Otis gave him the opportunity to design,
-build, test, and implement design changes on every aspect of elevator.
-Otis has been building elevators in the worlds tallest buildings for
-over a century. 
-
-In the last six years, he's been involved with almost all fourteen
-subsystems in an elevator. Most people have only ever experienced
-subsystems 3 and 11, the cab where you ride and the doors that open to
-let you in. 
-
-Kyle presented some excellent applications in elevator dynamics that
-require fundamental engineering dynamics equations and problem solving.
-
-
 - Who is Kyle Connolly?
  
 Kyle Connolly is a UConn engineering graduate and Connecticut native. He first
