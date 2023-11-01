@@ -1,6 +1,6 @@
 # Professor Ryan C. Cooper
 ## About the Instructor
-### __Office hours__ by appointment: [Calendly](https://calendly.com/ryan-c-cooper/30min)
+### __Office hours__ by appointment: [Calendly](https://calendly.com/ryan-c-cooper)
 
 <iframe width="560" height="315"
 src="https://www.youtube.com/embed/pvdID82aMEg" frameborder="0"
