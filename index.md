@@ -43,6 +43,15 @@ computational methods. Once we can communicate our engineering problems
 to Python code (or any other computer language) we can use standardized
 computational methods to solve those problems.
 
+### [ME3256 - Data Driven Decisions](https://cooperrc.github.io/data-driven-decisions)
+
+This course explores the integration of Monte Carlo analysis—a powerful
+probabilistic modeling technique—with technical communication. Students
+will learn how to effectively communicate results from Monte Carlo
+methods for both technical and non-technical audiences. Topics covered
+include probability modeling, Monte Carlo simulation, statistical
+analysis, and the creation of technical reports and presentations.
+
 ### [ME3263 - Introduction to Sensors and Data](https://cooperrc.github.io/sensors_and_data/README.html)
 
 This course introduces students to physical measurements, statistical
