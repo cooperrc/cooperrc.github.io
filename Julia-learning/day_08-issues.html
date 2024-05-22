@@ -343,15 +343,15 @@
 <p>Take for example</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="n">Symbolics</span>
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="n">Symbolics</span><span class="w"></span>
 
-<span class="nd">@variables</span> <span class="n">t</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">2</span><span class="p">](</span><span class="n">t</span><span class="p">)</span> <span class="c"># independent and dependent variables</span>
-<span class="nd">@variables</span> <span class="n">k</span> <span class="c"># parameters</span>
+<span class="nd">@variables</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">2</span><span class="p">](</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="c"># independent and dependent variables</span><span class="w"></span>
+<span class="nd">@variables</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="c"># parameters</span><span class="w"></span>
 
-<span class="n">Dx1</span> <span class="o">=</span> <span class="n">Differential</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-<span class="n">Dx2</span> <span class="o">=</span> <span class="n">Differential</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+<span class="n">Dx1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Differential</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="w"></span>
+<span class="n">Dx2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Differential</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span><span class="w"></span>
 
-<span class="n">V</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="o">*</span><span class="n">k</span><span class="o">*</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">-</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="o">^</span><span class="mi">2</span>
+<span class="n">V</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="o">*</span><span class="n">k</span><span class="o">*</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">-</span><span class="w"> </span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="o">^</span><span class="mi">2</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
@@ -369,7 +369,7 @@
 <p>but instead I get</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">Symbolics</span><span class="o">.</span><span class="n">expand_derivatives</span><span class="p">(</span><span class="n">Dx1</span><span class="p">(</span><span class="n">V</span><span class="p">))</span>
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">Symbolics</span><span class="o">.</span><span class="n">expand_derivatives</span><span class="p">(</span><span class="n">Dx1</span><span class="p">(</span><span class="n">V</span><span class="p">))</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
@@ -390,7 +390,7 @@
 <p>So, I’ll take derivatives of these terms and see what I get</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">Vterms</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="o">*</span><span class="n">k</span><span class="o">*</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="o">*</span><span class="n">k</span><span class="o">*</span><span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="n">k</span><span class="o">*</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">]]</span>
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">Vterms</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="o">*</span><span class="n">k</span><span class="o">*</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="o">*</span><span class="n">k</span><span class="o">*</span><span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="n">k</span><span class="o">*</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">]]</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
@@ -409,7 +409,7 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">Symbolics</span><span class="o">.</span><span class="n">expand_derivatives</span><span class="o">.</span><span class="p">(</span><span class="n">Dx1</span><span class="o">.</span><span class="p">(</span><span class="n">Vterms</span><span class="p">))</span>
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">Symbolics</span><span class="o">.</span><span class="n">expand_derivatives</span><span class="o">.</span><span class="p">(</span><span class="n">Dx1</span><span class="o">.</span><span class="p">(</span><span class="n">Vterms</span><span class="p">))</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
@@ -437,13 +437,13 @@ k \mathrm{x_2}\left( t \right) \\
 <p>Now, I can compare this to an unindexed set of variables</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="nd">@variables</span> <span class="n">t</span> <span class="n">y1</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="n">y2</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="c"># independent and dependent variables</span>
-<span class="nd">@variables</span> <span class="n">k</span> <span class="c"># parameters</span>
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="nd">@variables</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="n">y1</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="n">y2</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="c"># independent and dependent variables</span><span class="w"></span>
+<span class="nd">@variables</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="c"># parameters</span><span class="w"></span>
 
-<span class="n">Dy1</span> <span class="o">=</span> <span class="n">Differential</span><span class="p">(</span><span class="n">y1</span><span class="p">)</span>
-<span class="n">Dy2</span> <span class="o">=</span> <span class="n">Differential</span><span class="p">(</span><span class="n">y2</span><span class="p">)</span>
+<span class="n">Dy1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Differential</span><span class="p">(</span><span class="n">y1</span><span class="p">)</span><span class="w"></span>
+<span class="n">Dy2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Differential</span><span class="p">(</span><span class="n">y2</span><span class="p">)</span><span class="w"></span>
 
-<span class="n">V</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="o">*</span><span class="n">k</span><span class="o">*</span><span class="p">(</span><span class="n">y2</span><span class="o">-</span> <span class="n">y1</span><span class="p">)</span><span class="o">^</span><span class="mi">2</span>
+<span class="n">V</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="o">*</span><span class="n">k</span><span class="o">*</span><span class="p">(</span><span class="n">y2</span><span class="o">-</span><span class="w"> </span><span class="n">y1</span><span class="p">)</span><span class="o">^</span><span class="mi">2</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
@@ -456,7 +456,7 @@ k \mathrm{x_2}\left( t \right) \\
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">Symbolics</span><span class="o">.</span><span class="n">expand_derivatives</span><span class="p">(</span><span class="n">Dy1</span><span class="p">(</span><span class="n">V</span><span class="p">))</span>
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">Symbolics</span><span class="o">.</span><span class="n">expand_derivatives</span><span class="p">(</span><span class="n">Dy1</span><span class="p">(</span><span class="n">V</span><span class="p">))</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
@@ -471,7 +471,7 @@ k \mathrm{x_2}\left( t \right) \\
 <p><span class="math notranslate nohighlight">\(\frac{\partial V}{\partial y_1} = -k(y_2 - y_1)\)</span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="nd">@variables</span> <span class="n">z_1</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="nd">@variables</span><span class="w"> </span><span class="n">z_1</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
@@ -488,7 +488,7 @@ k \mathrm{x_2}\left( t \right) \\
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">D</span> <span class="o">=</span> <span class="n">Differential</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">D</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Differential</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
@@ -500,7 +500,7 @@ k \mathrm{x_2}\left( t \right) \\
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">D</span><span class="o">.</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">D</span><span class="o">.</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
@@ -512,7 +512,7 @@ k \mathrm{x_2}\left( t \right) \\
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">D</span><span class="o">.</span><span class="p">([</span><span class="n">y1</span><span class="p">,</span><span class="n">y2</span><span class="p">])</span>
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">D</span><span class="o">.</span><span class="p">([</span><span class="n">y1</span><span class="p">,</span><span class="n">y2</span><span class="p">])</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
@@ -533,9 +533,9 @@ k \mathrm{x_2}\left( t \right) \\
 <h2>Symbolics still adding support for arrays<a class="headerlink" href="#symbolics-still-adding-support-for-arrays" title="Permalink to this headline">¶</a></h2>
 <p>The Symbolics.jl package is incredible. Its still working on supporting differentiation with arrays. I filed this behavior on <a class="reference external" href="https://github.com/JuliaSymbolics/Symbolics.jl/issues/571">github.com/Symbolics.jl issue #571</a>. From what I can see, the main driver behind symbolic differentiation is in the <a class="reference external" href="https://github.com/JuliaSymbolics/Symbolics.jl/blob/master/src/diff.jl"><code class="docutils literal notranslate"><span class="pre">diff.jl</span></code></a> file.</p>
 <p>I was getting the error from line 58</p>
-<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="n">symtype</span><span class="p">(</span><span class="n">expr</span><span class="p">)</span> <span class="o">&lt;:</span> <span class="kt">AbstractArray</span>
-        <span class="n">error</span><span class="p">(</span><span class="s">&quot;Differentiation of expressions involving arrays and array variables is not yet supported.&quot;</span><span class="p">)</span>
-    <span class="k">end</span>
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">symtype</span><span class="p">(</span><span class="n">expr</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;:</span><span class="w"> </span><span class="kt">AbstractArray</span><span class="w"></span>
+<span class="w">        </span><span class="n">error</span><span class="p">(</span><span class="s">&quot;Differentiation of expressions involving arrays and array variables is not yet supported.&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="k">end</span><span class="w"></span>
 </pre></div>
 </div>
 <p>but <a class="reference external" href="https://github.com/shashi">&#64;shashi</a> added some great exceptions that remove this error in <a class="reference external" href="https://github.com/JuliaSymbolics/Symbolics.jl/pull/570">#570</a> and <a class="reference external" href="https://github.com/JuliaSymbolics/Symbolics.jl/pull/570">#568</a>. There is always more work to be done on projects like this and because Julia is open source, I can dig into the code, offer help and try to add my experiences to the solution.</p>
@@ -544,8 +544,8 @@ k \mathrm{x_2}\left( t \right) \\
 <h2>Wrapping up<a class="headerlink" href="#wrapping-up" title="Permalink to this headline">¶</a></h2>
 <p>Today, I found some strange behavior in the Symbolics.jl package. I’ll continue to update/add to the Julia projects as issues or hopefully merge some improvements. It would be great to document the process of a PR merge from start-to-finish.</p>
 <p>For now, the work-around appears to be that <code class="docutils literal notranslate"><span class="pre">jacobian</span></code> and <code class="docutils literal notranslate"><span class="pre">Differential</span></code> only support scalar values. So I can create a <code class="docutils literal notranslate"><span class="pre">Vector</span></code> of individual values as such</p>
-<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="nd">@variables</span> <span class="n">x1</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="n">x2</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
-<span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="n">x1</span><span class="p">,</span> <span class="n">x2</span><span class="p">]</span>
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="nd">@variables</span><span class="w"> </span><span class="n">x1</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="n">x2</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="w"></span>
+<span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="n">x1</span><span class="p">,</span><span class="w"> </span><span class="n">x2</span><span class="p">]</span><span class="w"></span>
 </pre></div>
 </div>
 <p>The development behind Julia and Symbolics.jl is active and inspiring, so I’m sure this work-around won’t need to exist much longer.</p>

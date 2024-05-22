@@ -360,17 +360,17 @@
 <h1>Day_03: Dataframes and Plot Themes<a class="headerlink" href="#day-03-dataframes-and-plot-themes" title="Permalink to this headline">¶</a></h1>
 <p>Today I wanted to visualize some data that I use for my <a class="reference external" href="https://cooperrc.github.io/computational-mechanics/module_02/README.html">computational mechanics</a> course, the New York Stock Exchange data from 2010 to 2016. Its a nice set of data to load in a lot of values, parse it down based upon the <a class="reference external" href="https://www.nyse.com/listings_directory/stock">NYSE symbol</a> and view the rise and fall of stock prices.</p>
 <p>I usually use <a class="reference external" href="https://pandas.pydata.org/">Pandas</a> as my data processing/storage tool, so I stumbled upon the <code class="docutils literal notranslate"><span class="pre">CSV</span></code> and <code class="docutils literal notranslate"><span class="pre">DataFrames</span></code> packages in the Julia ecosystem. I installed via</p>
-<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="n">Pkg</span>
-<span class="n">Pkg</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s">&quot;CSV&quot;</span><span class="p">)</span>
-<span class="n">Pkg</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s">&quot;DataFrames&quot;</span><span class="p">)</span>
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="n">Pkg</span><span class="w"></span>
+<span class="n">Pkg</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s">&quot;CSV&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="n">Pkg</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s">&quot;DataFrames&quot;</span><span class="p">)</span><span class="w"></span>
 </pre></div>
 </div>
 <p>where <code class="docutils literal notranslate"><span class="pre">CSV</span></code> could read the comma-separated value file and <code class="docutils literal notranslate"><span class="pre">DataFrames</span></code> created a similar structure to a Pandas dataframe in Julia</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="n">Plots</span>
-<span class="k">using</span> <span class="n">CSV</span><span class="p">,</span> <span class="n">DataFrames</span>
-<span class="k">using</span> <span class="n">Dates</span>
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="n">Plots</span><span class="w"></span>
+<span class="k">using</span><span class="w"> </span><span class="n">CSV</span><span class="p">,</span><span class="w"> </span><span class="n">DataFrames</span><span class="w"></span>
+<span class="k">using</span><span class="w"> </span><span class="n">Dates</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
@@ -380,7 +380,7 @@
 <p>Now, I can <code class="docutils literal notranslate"><span class="pre">CSV.read</span></code> the NYSE data as a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> as follows,</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">nyse_df</span> <span class="o">=</span> <span class="n">CSV</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s">&quot;./nyse-data.csv&quot;</span><span class="p">,</span> <span class="n">DataFrame</span><span class="p">);</span>
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">nyse_df</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CSV</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s">&quot;./nyse-data.csv&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">DataFrame</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
@@ -394,7 +394,7 @@
 <p>In one line, these calls to <code class="docutils literal notranslate"><span class="pre">nyse_df</span></code> create <code class="docutils literal notranslate"><span class="pre">google_df</span></code> that only contains the Google open, close, low, high, and volume values from 2010 - 2016.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">google_df</span> <span class="o">=</span> <span class="n">nyse_df</span><span class="p">[</span><span class="n">nyse_df</span><span class="p">[</span><span class="o">!</span><span class="p">,</span> <span class="s">&quot;symbol&quot;</span><span class="p">]</span> <span class="o">.==</span> <span class="s">&quot;GOOGL&quot;</span><span class="p">,</span> <span class="o">:</span><span class="p">];</span>
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">google_df</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nyse_df</span><span class="p">[</span><span class="n">nyse_df</span><span class="p">[</span><span class="o">!</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;symbol&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">.==</span><span class="w"> </span><span class="s">&quot;GOOGL&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">:</span><span class="p">];</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
@@ -405,10 +405,10 @@
 <p>Dates can be so frustrating in any language. In this case, all of the dates are interpreted as strings. Not the worst, but I do want the actual datetime values. I looped through each date and created datetime values in <code class="docutils literal notranslate"><span class="pre">days</span></code>. Above, I imported <code class="docutils literal notranslate"><span class="pre">Dates</span></code> so I can convert the string to a datetime.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">days</span> <span class="o">=</span> <span class="n">zeros</span><span class="p">(</span><span class="n">Date</span><span class="p">,</span> <span class="n">size</span><span class="p">(</span><span class="n">google_df</span><span class="p">)[</span><span class="mi">1</span><span class="p">])</span>
-<span class="k">for</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span> <span class="k">in</span> <span class="n">enumerate</span><span class="p">(</span><span class="n">google_df</span><span class="p">[</span><span class="o">!</span><span class="p">,</span> <span class="s">&quot;date&quot;</span><span class="p">])</span>
-    <span class="n">days</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">Dates</span><span class="o">.</span><span class="n">Date</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
-<span class="k">end</span>
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">days</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">zeros</span><span class="p">(</span><span class="n">Date</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="p">(</span><span class="n">google_df</span><span class="p">)[</span><span class="mi">1</span><span class="p">])</span><span class="w"></span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">d</span><span class="p">)</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">enumerate</span><span class="p">(</span><span class="n">google_df</span><span class="p">[</span><span class="o">!</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;date&quot;</span><span class="p">])</span><span class="w"></span>
+<span class="w">    </span><span class="n">days</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Dates</span><span class="o">.</span><span class="n">Date</span><span class="p">(</span><span class="n">d</span><span class="p">)</span><span class="w"></span>
+<span class="k">end</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
@@ -421,12 +421,12 @@
 <p>For reference, I plotted the opening and closing prices of Google’s stock with the <code class="docutils literal notranslate"><span class="pre">:default</span></code> theme.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">Plots</span><span class="o">.</span><span class="n">theme</span><span class="p">(</span><span class="ss">:default</span><span class="p">)</span>
-<span class="n">plot</span><span class="p">(</span><span class="n">days</span><span class="p">,</span> 
-    <span class="n">google_df</span><span class="p">[</span><span class="o">!</span><span class="p">,</span> <span class="s">&quot;open&quot;</span><span class="p">],</span> 
-    <span class="n">label</span> <span class="o">=</span> <span class="s">&quot;open price&quot;</span><span class="p">,</span>
-    <span class="n">title</span> <span class="o">=</span> <span class="s">&quot;Google&#39;s opening and closing NYSE price&quot;</span><span class="p">)</span>
-<span class="n">plot!</span><span class="p">(</span><span class="n">days</span><span class="p">,</span> <span class="n">google_df</span><span class="p">[</span><span class="o">!</span><span class="p">,</span> <span class="s">&quot;close&quot;</span><span class="p">],</span> <span class="n">label</span> <span class="o">=</span> <span class="s">&quot;close price&quot;</span><span class="p">)</span>
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">Plots</span><span class="o">.</span><span class="n">theme</span><span class="p">(</span><span class="ss">:default</span><span class="p">)</span><span class="w"></span>
+<span class="n">plot</span><span class="p">(</span><span class="n">days</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="n">google_df</span><span class="p">[</span><span class="o">!</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;open&quot;</span><span class="p">],</span><span class="w"> </span>
+<span class="w">    </span><span class="n">label</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;open price&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Google&#39;s opening and closing NYSE price&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="n">plot!</span><span class="p">(</span><span class="n">days</span><span class="p">,</span><span class="w"> </span><span class="n">google_df</span><span class="p">[</span><span class="o">!</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;close&quot;</span><span class="p">],</span><span class="w"> </span><span class="n">label</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;close price&quot;</span><span class="p">)</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
@@ -445,34 +445,34 @@
 <li><p>removed the gridlines</p></li>
 </ul>
 <p>here it is:</p>
-<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">_themes</span><span class="p">[</span><span class="ss">:cooper</span><span class="p">]</span> <span class="o">=</span> <span class="n">PlotTheme</span><span class="p">(</span><span class="n">linewidth</span> <span class="o">=</span> <span class="mi">4</span><span class="p">,</span>
-                             <span class="n">markersize</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span>
-                             <span class="n">titlefontsize</span> <span class="o">=</span> <span class="mi">24</span><span class="p">,</span>
-                             <span class="n">guidefontsize</span> <span class="o">=</span> <span class="mi">18</span><span class="p">,</span>
-                             <span class="n">tickfontsize</span> <span class="o">=</span> <span class="mi">18</span><span class="p">,</span>
-                             <span class="n">colorbar_tickfontsize</span> <span class="o">=</span> <span class="mi">18</span><span class="p">,</span>
-                             <span class="n">legend_font_pointsize</span> <span class="o">=</span> <span class="mi">18</span><span class="p">,</span>
-                             <span class="n">legend</span><span class="o">=</span><span class="ss">:outertopright</span><span class="p">,</span>
-                             <span class="n">grid</span> <span class="o">=</span> <span class="nb">false</span>
-                            <span class="p">)</span>
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">_themes</span><span class="p">[</span><span class="ss">:cooper</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PlotTheme</span><span class="p">(</span><span class="n">linewidth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"></span>
+<span class="w">                             </span><span class="n">markersize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"></span>
+<span class="w">                             </span><span class="n">titlefontsize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">24</span><span class="p">,</span><span class="w"></span>
+<span class="w">                             </span><span class="n">guidefontsize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">18</span><span class="p">,</span><span class="w"></span>
+<span class="w">                             </span><span class="n">tickfontsize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">18</span><span class="p">,</span><span class="w"></span>
+<span class="w">                             </span><span class="n">colorbar_tickfontsize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">18</span><span class="p">,</span><span class="w"></span>
+<span class="w">                             </span><span class="n">legend_font_pointsize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">18</span><span class="p">,</span><span class="w"></span>
+<span class="w">                             </span><span class="n">legend</span><span class="o">=</span><span class="ss">:outertopright</span><span class="p">,</span><span class="w"></span>
+<span class="w">                             </span><span class="n">grid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="w"></span>
+<span class="w">                            </span><span class="p">)</span><span class="w"></span>
 </pre></div>
 </div>
 <p>Then, I included the theme in <code class="docutils literal notranslate"><span class="pre">PlotThemes.jl</span></code> and created my new Google stock price figure.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">Plots</span><span class="o">.</span><span class="n">theme</span><span class="p">(</span><span class="ss">:cooper</span><span class="p">)</span>
-<span class="n">plot</span><span class="p">(</span><span class="n">days</span><span class="p">,</span> 
-    <span class="n">google_df</span><span class="p">[</span><span class="o">!</span><span class="p">,</span> <span class="s">&quot;open&quot;</span><span class="p">],</span> 
-    <span class="n">label</span> <span class="o">=</span> <span class="s">&quot;open price&quot;</span><span class="p">,</span>
-    <span class="c"># legend_font_pointsize = 18,</span>
-    <span class="n">title</span> <span class="o">=</span> <span class="s">&quot;Google&#39;s opening and closing</span><span class="se">\n</span><span class="s"> NYSE price&quot;</span><span class="p">)</span>
-    
-    <span class="c"># xticks = [ &quot;2010-01-04&quot;, &quot;2011-09-30&quot;, &quot;2013-07-03&quot;, &quot;2015-04-02&quot;, &quot;2016-12-29&quot;])</span>
-    <span class="c">#xticks = google_df[1:floor(Int64, end/4):end, &quot;date&quot;])</span>
-    <span class="c"># xtickfont = font(20, &quot;Sans&quot;),</span>
-    <span class="c"># xticks = 0:500:5000)</span>
-<span class="n">plot!</span><span class="p">(</span><span class="n">days</span><span class="p">,</span> <span class="n">google_df</span><span class="p">[</span><span class="o">!</span><span class="p">,</span> <span class="s">&quot;close&quot;</span><span class="p">],</span> <span class="n">label</span> <span class="o">=</span> <span class="s">&quot;close price&quot;</span><span class="p">,</span> <span class="n">xrotation</span> <span class="o">=</span> <span class="mi">75</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="p">(</span><span class="mi">700</span><span class="p">,</span><span class="mi">400</span><span class="p">))</span>
-<span class="n">plot!</span><span class="p">(</span><span class="n">xlabel</span> <span class="o">=</span> <span class="s">&quot;date&quot;</span><span class="p">,</span> <span class="n">ylabel</span> <span class="o">=</span> <span class="s">&quot;price (</span><span class="se">\$\$</span><span class="s">)&quot;</span><span class="p">)</span>
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">Plots</span><span class="o">.</span><span class="n">theme</span><span class="p">(</span><span class="ss">:cooper</span><span class="p">)</span><span class="w"></span>
+<span class="n">plot</span><span class="p">(</span><span class="n">days</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="n">google_df</span><span class="p">[</span><span class="o">!</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;open&quot;</span><span class="p">],</span><span class="w"> </span>
+<span class="w">    </span><span class="n">label</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;open price&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="c"># legend_font_pointsize = 18,</span><span class="w"></span>
+<span class="w">    </span><span class="n">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Google&#39;s opening and closing</span><span class="se">\n</span><span class="s"> NYSE price&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c"># xticks = [ &quot;2010-01-04&quot;, &quot;2011-09-30&quot;, &quot;2013-07-03&quot;, &quot;2015-04-02&quot;, &quot;2016-12-29&quot;])</span><span class="w"></span>
+<span class="w">    </span><span class="c">#xticks = google_df[1:floor(Int64, end/4):end, &quot;date&quot;])</span><span class="w"></span>
+<span class="w">    </span><span class="c"># xtickfont = font(20, &quot;Sans&quot;),</span><span class="w"></span>
+<span class="w">    </span><span class="c"># xticks = 0:500:5000)</span><span class="w"></span>
+<span class="n">plot!</span><span class="p">(</span><span class="n">days</span><span class="p">,</span><span class="w"> </span><span class="n">google_df</span><span class="p">[</span><span class="o">!</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;close&quot;</span><span class="p">],</span><span class="w"> </span><span class="n">label</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;close price&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">xrotation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">75</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="mi">700</span><span class="p">,</span><span class="mi">400</span><span class="p">))</span><span class="w"></span>
+<span class="n">plot!</span><span class="p">(</span><span class="n">xlabel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;date&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">ylabel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;price (</span><span class="se">\$\$</span><span class="s">)&quot;</span><span class="p">)</span><span class="w"></span>
 </pre></div>
 </div>
 </div>

@@ -43,6 +43,9 @@ computational methods. Once we can communicate our engineering problems
 to Python code (or any other computer language) we can use standardized
 computational methods to solve those problems.
 
+### [ME3256 - Data Driven
+Decisions](https://cooperrc.github.io/data-driven-decisions)
+
 ### [ME3263 - Introduction to Sensors and Data](https://cooperrc.github.io/sensors_and_data/README.html)
 
 This course introduces students to physical measurements, statistical

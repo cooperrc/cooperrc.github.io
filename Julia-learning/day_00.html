@@ -308,28 +308,28 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">]</span> <span class="pre">add</span> <span class="pre">IJulia</span></code> adds Julia to the Python/conda environment (I think)</p></li>
 </ol>
 <p>Playing with interactive code:</p>
-<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">]</span><span class="w"></span>
 </pre></div>
 </div>
 <p>creates and displays the <code class="docutils literal notranslate"><span class="pre">3-element</span> <span class="pre">Vector{Int64}</span></code>.</p>
 <p>Trying to get dot product:</p>
-<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">x</span><span class="o">*</span><span class="n">x</span>
-<span class="n">ERROR</span><span class="o">:</span> <span class="kt">MethodError</span><span class="o">:</span> <span class="n">no</span> <span class="n">method</span> <span class="n">matching</span> <span class="o">*</span><span class="p">(</span><span class="o">::</span><span class="kt">Vector</span><span class="p">{</span><span class="kt">Int64</span><span class="p">},</span> <span class="o">::</span><span class="kt">Vector</span><span class="p">{</span><span class="kt">Int64</span><span class="p">})</span>
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span><span class="w"> </span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="w"></span>
+<span class="n">ERROR</span><span class="o">:</span><span class="w"> </span><span class="kt">MethodError</span><span class="o">:</span><span class="w"> </span><span class="n">no</span><span class="w"> </span><span class="n">method</span><span class="w"> </span><span class="n">matching</span><span class="w"> </span><span class="o">*</span><span class="p">(</span><span class="o">::</span><span class="kt">Vector</span><span class="p">{</span><span class="kt">Int64</span><span class="p">},</span><span class="w"> </span><span class="o">::</span><span class="kt">Vector</span><span class="p">{</span><span class="kt">Int64</span><span class="p">})</span><span class="w"></span>
 </pre></div>
 </div>
 <p>The default is a column vector, e.g. <span class="math notranslate nohighlight">\(3\times1\)</span>. So trying to multiply
 these together gives me a mismatched indices error.</p>
 <p>Correcting the approach:</p>
-<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">transpose</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">*</span><span class="n">x</span>
-<span class="mi">14</span>
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span><span class="w"> </span><span class="n">transpose</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">*</span><span class="n">x</span><span class="w"></span>
+<span class="mi">14</span><span class="w"></span>
 </pre></div>
 </div>
 <p>I can even reverse it and get the outer product</p>
-<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">x</span><span class="o">*</span><span class="n">transpose</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-<span class="mi">3</span><span class="o">×</span><span class="mi">3</span> <span class="kt">Matrix</span><span class="p">{</span><span class="kt">Int64</span><span class="p">}</span><span class="o">:</span>
- <span class="mi">1</span>  <span class="mi">2</span>  <span class="mi">3</span>
- <span class="mi">2</span>  <span class="mi">4</span>  <span class="mi">6</span>
- <span class="mi">3</span>  <span class="mi">6</span>  <span class="mi">9</span>
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span><span class="w"> </span><span class="n">x</span><span class="o">*</span><span class="n">transpose</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="w"></span>
+<span class="mi">3</span><span class="o">×</span><span class="mi">3</span><span class="w"> </span><span class="kt">Matrix</span><span class="p">{</span><span class="kt">Int64</span><span class="p">}</span><span class="o">:</span><span class="w"></span>
+<span class="w"> </span><span class="mi">1</span><span class="w">  </span><span class="mi">2</span><span class="w">  </span><span class="mi">3</span><span class="w"></span>
+<span class="w"> </span><span class="mi">2</span><span class="w">  </span><span class="mi">4</span><span class="w">  </span><span class="mi">6</span><span class="w"></span>
+<span class="w"> </span><span class="mi">3</span><span class="w">  </span><span class="mi">6</span><span class="w">  </span><span class="mi">9</span><span class="w"></span>
 </pre></div>
 </div>
 <div class="section" id="wrapping-up">
