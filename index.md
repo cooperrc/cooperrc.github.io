@@ -2,10 +2,16 @@
 ## About the Instructor
 ### __Office hours__ by appointment: [Calendly](https://calendly.com/ryan-c-cooper)
 
-<iframe width="560" height="315"
-src="https://www.youtube.com/embed/pvdID82aMEg" frameborder="0"
-allow="accelerometer; autoplay; clipboard-write; encrypted-media;
-gyroscope; picture-in-picture" allowfullscreen></iframe>
+## [Prof. Cooper YouTube channel](https://www.youtube.com/@profryancooper)
+
+[![Cooper Channel
+banner](https://yt3.googleusercontent.com/HBEZnZZR0EDP3Hxlv30Ilv1nSlmpLuEEF9XzJmDRWOstsWpBnrLj1JCeu5PNu4RikzHsxeNs=w2120-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj)](https://www.youtube.com/@profryancooper)
+
+<!-- <iframe width="560" height="315" -->
+<!-- src="https://www.youtube.com/embed/pvdID82aMEg" frameborder="0" -->
+<!-- allow="accelerometer; autoplay; clipboard-write; encrypted-media; -->
+<!-- gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+<!--  -->
 
 Ryan C. Cooper, Ph.D.\
 Assistant Professor-in-Residence\
@@ -18,8 +24,7 @@ Storrs, CT 06269
 ### Contact Prof. Cooper
 
 - __Office hours__ by appointment: [Calendly](https://calendly.com/ryan-c-cooper/30min)
-- direct message on [gitter.im/cooperrc](https://gitter.im/cooperrc)
-- direct message on [Campuswire](https://campuswire.com/)
+- Connect on [GitHub](https://github.com/cooperrc)
 - __email:__ ryan_dot_c_dot_cooper_at_uconn.edu
 
 

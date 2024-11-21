@@ -3,14 +3,14 @@
 
 title: Prof. Cooper
 author: Ryan C. Cooper
-copyright: "2022"
+copyright: "2024"
 logo: spiderman-icon.svg
 only_build_toc_files: true
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
 execute:
-  execute_notebooks: cache
+  execute_notebooks: force
   allow_errors: true
 parse:
     myst_extended_syntax: true

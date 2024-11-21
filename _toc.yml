@@ -6,14 +6,4 @@ root: index
 chapters:
   - file: philosophy
   - file: talks
-  - file: Julia-learning/learning-julia
-    sections:
-    - file: Julia-learning/day_00
-    - file: Julia-learning/day_01
-    - file: Julia-learning/day_02
-    - file: Julia-learning/day_03
-    - file: Julia-learning/day_04
-    - file: Julia-learning/day_05
-    - file: Julia-learning/day_06
-    - file: Julia-learning/day_07
-    - file: Julia-learning/day_08-issues
+  - file: learning
