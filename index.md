@@ -4,8 +4,7 @@
 
 ## [Prof. Cooper YouTube channel](https://www.youtube.com/@profryancooper)
 
-[![Cooper Channel
-banner](https://yt3.googleusercontent.com/HBEZnZZR0EDP3Hxlv30Ilv1nSlmpLuEEF9XzJmDRWOstsWpBnrLj1JCeu5PNu4RikzHsxeNs=w2120-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj)](https://www.youtube.com/@profryancooper)
+[![Cooper Channel banner](spiderm-at-desk.png)](https://www.youtube.com/@profryancooper)
 
 <!-- <iframe width="560" height="315" -->
 <!-- src="https://www.youtube.com/embed/pvdID82aMEg" frameborder="0" -->
@@ -14,7 +13,8 @@ banner](https://yt3.googleusercontent.com/HBEZnZZR0EDP3Hxlv30Ilv1nSlmpLuEEF9XzJm
 <!--  -->
 
 Ryan C. Cooper, Ph.D.\
-Assistant Professor-in-Residence\
+Director of Faculty Development\
+Associate Professor-in-Residence\
 Mechanical Engineering Department\
 University of Connecticut\
 191 Auditorium rd\
