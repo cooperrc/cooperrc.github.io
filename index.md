@@ -75,7 +75,7 @@ and thermal sciences, as well as statistical methods to analyze the
 experimental data.
 
 
-### [ME5180 - Advanced Dynamics](https://cooperrc.github.io/advanced-dynamics)
+### [ME5180 - Advanced Dynamics](https://cooperrc.github.io/dynamics)
 
 Dynamics is the study of how things move and interact. It sets the
 foundation for almost every Mechanical engineering discipline: solid
