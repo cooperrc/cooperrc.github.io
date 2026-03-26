@@ -4,6 +4,7 @@
 format: jb-book
 root: index
 chapters:
+  - file: resume
   - file: philosophy
   - file: talks
   - file: learning
